@@ -1,12 +1,24 @@
 class Plant:
-  def __init__(self, name, heigth, age):
-    self.name = name
-    self.height = heigth
-    self.age = age
+    def __init__(self, name: str, heigth: float, age: int):
+        self.name = name
+        self.height = heigth
+        self.age = age
 
-  def print_info(self):
-    print(f"{self.name}: {self.height}, {self.age} days old")
+    def show(self):
+        print(f"{self.name}: {self.height}, {self.age} days old")
+
+
+def main():
+    print("=== Garden Plant Registry ===")
+
+    rose = Plant("Rose", 25, 30)
+    sunflower = Plant("Sunflower", 80, 45)
+    cactus = Plant("Cactus", 15, 120)
+
+    rose.show()
+    sunflower.show()
+    cactus.show()
+
 
 if __name__ == "__main__":
-  plant1 = Plant("Rose", "25cm", 30)
-  plant1.print_info()
+    main()
