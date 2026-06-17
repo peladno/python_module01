@@ -1,9 +1,9 @@
 class Plant:
     def __init__(
         self,
-        name: str = "",
-        height: float = 0.0,
-        age: int = 0,
+        name: str,
+        height: float,
+        age: int,
         age_a_day: int = 1,
         grow_per_day: float = .1,
     ):
