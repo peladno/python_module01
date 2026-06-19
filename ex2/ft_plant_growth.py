@@ -6,25 +6,25 @@ class Plant:
         age: int,
     ):
         self.name = name
-        self.height = float(height)
-        self.age = int(age)
+        self.height = height
+        self.age = age
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {round(self.height, 1)}, {self.age} days old")
 
-    def grow(self):
+    def grow(self) -> float:
         self.height *= 1.1
         return self.height
 
-    def age_day(self):
+    def age_day(self)-> int:
         self.age += 1
         return self.age
 
-    def simulate_day(self):
+    def simulate_day(self) -> None:
         self.grow()
         self.age_day()
 
-    def simulate_days(self, days):
+    def simulate_days(self, days) -> float:
         initial = self.height
         for day in range(days):
             print(f"=== Day {day} ===")
@@ -34,7 +34,7 @@ class Plant:
 
 
 
-def main():
+def ft_plant_growth():
     plant1 = Plant("Rose", 50, 10)
     print("=== Garden Plant Growth ===")
     diff = plant1.simulate_days(7)
@@ -42,4 +42,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    ft_plant_growth()

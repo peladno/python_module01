@@ -1,38 +1,51 @@
 class Plant:
     def __init__(
         self,
-        name: str = "Rose",
-        height: float = 0.0,
-        age: int = 0,
-        age_a_day: int = 1,
-        grow_per_day: float = .1,
+        name: str,
+        height: float,
+        age: int,
     ):
         self.name = name
-        self.height = float(height)
-        self.age = int(age)
-        self.age_a_day = int(age_a_day)
-        self.grow_per_day = float(grow_per_day)
+        self.height = height
+        self.age = age
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {round(self.height, 1)}, {self.age} days old")
 
-    def grow(self):
-        self.height *= (1 + self.grow_per_day)
+    def grow(self) -> float:
+        self.height *= 1.1
         return self.height
 
-    def age_day(self):
-        self.age += self.age_a_day
+    def age_day(self) -> int:
+        self.age += 1
         return self.age
 
-    def simulate_day(self):
+    def simulate_day(self) -> None:
         self.grow()
         self.age_day()
 
+    def simulate_days(self, days) -> float:
+        initial = self.height
+        for day in range(days):
+            print(f"=== Day {day} ===")
+            self.simulate_day()
+            self.show()
+        return self.height - initial
 
-def main():
-    plant1 = Plant("Rose", 50, 10)
-    plant1.show()
 
+
+def ft_plant_factory():
+    plant_list = [
+    Plant("Rose", 25, 13),
+    Plant("Sunflower",10, 13),
+    Plant("Oak", 5, 10),
+    Plant("Fern",3, 2),
+    Plant("Cactus", 1, 1.2),
+    ]
+
+    for plants in plant_list:
+       print("Created: ", end="")
+       plants.show()
 
 if __name__ == "__main__":
-    main()
+    ft_plant_factory()

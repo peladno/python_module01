@@ -4,11 +4,11 @@ class Plant:
         self.height = heigth
         self.age = age
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name}: {self.height}, {self.age} days old")
 
 
-def main():
+def ft_garden_data():
     print("=== Garden Plant Registry ===")
 
     rose = Plant("Rose", 25, 30)
@@ -21,4 +21,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    ft_garden_data()
