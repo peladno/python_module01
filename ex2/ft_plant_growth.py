@@ -24,7 +24,7 @@ class Plant:
         self.grow()
         self.age_day()
 
-    def simulate_days(self, days) -> float:
+    def simulate_days(self, days: int) -> float:
         initial = self.height
         for day in range(days):
             print(f"=== Day {day} ===")

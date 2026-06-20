@@ -24,7 +24,7 @@ class Plant:
         self.grow()
         self.age_day()
 
-    def simulate_days(self, days) -> float:
+    def simulate_days(self, days: int) -> float:
         initial = self.height
         for day in range(days):
             print(f"=== Day {day} ===")
@@ -40,7 +40,7 @@ def ft_plant_factory():
     Plant("Sunflower",10, 13),
     Plant("Oak", 5, 10),
     Plant("Fern",3, 2),
-    Plant("Cactus", 1, 1.2),
+    Plant("Cactus", 1, 2),
     ]
 
     for plants in plant_list:
