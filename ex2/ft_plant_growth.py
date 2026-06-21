@@ -13,7 +13,7 @@ class Plant:
         print(f"{self.name}: {round(self.height, 1)}, {self.age} days old")
 
     def grow(self) -> float:
-        self.height *= 1.1
+        self.height += 1.2
         return self.height
 
     def age_day(self)-> int:

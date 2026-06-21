@@ -35,7 +35,7 @@ class Plant:
         print(f"{self.name}: {round(self._height, 1)}cm, {self._age} days old")
 
     def grow(self) -> float:
-        self._height *= 1.1
+        self._height += 1.2
         return self._height
 
     def age_day(self) -> int:
@@ -48,10 +48,9 @@ class Plant:
 
     def simulate_days(self, days: int) -> float:
         initial = self._height
-        for day in range(days):
-            print(f"=== Day {day} ===")
+        print(f"[make tomato grow and age for {days} days]")
+        for _ in range(days):
             self.simulate_day()
-            self.show()
         return self._height - initial
  
 class Flower(Plant):
@@ -94,8 +93,9 @@ class Tree(Plant):
         super().show()
         print(f" Trunk diameter: {self.trunk_diameter}")
     
-    def produce_shadow(self) -> None:
+    def produce_shade(self) -> None:
         print(f"[asking the {self.name} to produce shade]")
+        print(f"Tree Oak now produces a shade of {self._height}cm long and {self.trunk_diameter}cm wide.")
 
 
 class Vegetable(Plant):
@@ -124,11 +124,23 @@ class Vegetable(Plant):
 def ft_plant_type() ->None:
     print("=== Garden Plant Types ===")
     print("")
-    flower = Flower("Rose", 15,10,"Red")
-    flower.show()
-    flower.to_bloom()
-    flower.show()
+    print("=== Flower")
+    rose = Flower("Rose", 15,10,"Red")
+    rose.show()
+    rose.to_bloom()
+    rose.show()
+    print("")
+    print("=== Tree")
+    oak = Tree("Oak", 200.0, 365, 5.0)
+    oak.show()
+    oak.produce_shade()
+    print("")
+    print("=== Vegetable")
+    tomato = Vegetable("Tomato", 5.0, 10, "April")
+    tomato.show()
+    tomato.simulate_days(20)
+    tomato.show()
 
-
+    
 if __name__ == "__main__":
     ft_plant_type()
