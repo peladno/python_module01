@@ -98,7 +98,7 @@ class Tree(Plant):
         print(f"[asking the {self.name} to produce shade]")
         print(
             f"Tree Oak now produces a shade of {self._height}cm "
-            "long and {self.trunk_diameter}cm wide.")
+            f"long and {self.trunk_diameter}cm wide.")
 
 
 class Vegetable(Plant):

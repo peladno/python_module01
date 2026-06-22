@@ -157,7 +157,7 @@ class Tree(Plant):
         self._statistics.increase_shade()
         print(
             f"Tree {self.name} now produces a shade of {self._height}cm "
-            "long and {self.trunk_diameter}cm wide.")
+            f"long and {self.trunk_diameter}cm wide.")
 
 
 class Vegetable(Plant):
