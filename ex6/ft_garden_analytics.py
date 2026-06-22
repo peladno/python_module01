@@ -5,13 +5,13 @@ class Plant:
             self._count_age = 0
             self._count_show = 0
 
-        def increase_grow(self):
+        def increase_grow(self) -> None:
             self._count_grow += 1
 
-        def increase_age(self):
+        def increase_age(self) -> None:
             self._count_age += 1
 
-        def increase_show(self):
+        def increase_show(self) -> None:
             self._count_show += 1
 
         def display(self) -> None:
@@ -29,7 +29,7 @@ class Plant:
         self._age = age
         self._statistics: Plant.Statistics = self.Statistics()
 
-    def set_height(self, _height: float):
+    def set_height(self, _height: float) -> None:
         self._height = _height
         if _height < 0:
             print(f"{self.name}: Error, height can't be negative")
@@ -133,7 +133,7 @@ class Tree(Plant):
         def increase_shade(self) -> None:
             self._count_shade += 1
 
-        def display(self):
+        def display(self) -> None:
             super().display()
             print(f" {self._count_shade} shade")
 
