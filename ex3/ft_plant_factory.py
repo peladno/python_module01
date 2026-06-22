@@ -33,19 +33,19 @@ class Plant:
         return self.height - initial
 
 
-
 def ft_plant_factory():
     plant_list = [
-    Plant("Rose", 25, 13),
-    Plant("Sunflower",10, 13),
-    Plant("Oak", 5, 10),
-    Plant("Fern",3, 2),
-    Plant("Cactus", 1, 2),
+        Plant("Rose", 25, 13),
+        Plant("Sunflower", 10, 13),
+        Plant("Oak", 5, 10),
+        Plant("Fern", 3, 2),
+        Plant("Cactus", 1, 2),
     ]
 
     for plants in plant_list:
-       print("Created: ", end="")
-       plants.show()
+        print("Created: ", end="")
+        plants.show()
+
 
 if __name__ == "__main__":
     ft_plant_factory()

@@ -13,15 +13,15 @@ class Plant:
         if _height < 0:
             print(f"{self.name}: Error, height can't be negative")
             print("Height update rejected")
-        else: 
+        else:
             self._height = _height
             print(f"Height updated: {self._height}cm")
 
     def get_height(self) -> float:
         return self._height
-    
+
     def set_age(self, _age: int) -> None:
-        if _age < 0 :
+        if _age < 0:
             print(f"{self.name}: Error, age can't be negative")
             print("Age update rejected")
         else:
@@ -42,7 +42,7 @@ class Plant:
         self._age += 1
         return self._age
 
-    def simulate_day(self) ->None:
+    def simulate_day(self) -> None:
         self.grow()
         self.age_day()
 
@@ -53,7 +53,8 @@ class Plant:
             self.simulate_day()
             self.show()
         return self._height - initial
- 
+
+
 def ft_garden_security():
     print("=== Garden Security System ===")
     plant = Plant("Rose", 15.0, 10)
@@ -69,5 +70,6 @@ def ft_garden_security():
     print("Current state: ", end="")
     plant.show()
 
-if __name__ == "__main__": 
+
+if __name__ == "__main__":
     ft_garden_security()

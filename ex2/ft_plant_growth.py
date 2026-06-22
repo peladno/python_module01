@@ -16,7 +16,7 @@ class Plant:
         self.height += 1.2
         return self.height
 
-    def age_day(self)-> int:
+    def age_day(self) -> int:
         self.age += 1
         return self.age
 
@@ -31,7 +31,6 @@ class Plant:
             self.simulate_day()
             self.show()
         return self.height - initial
-
 
 
 def ft_plant_growth():

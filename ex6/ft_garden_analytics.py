@@ -27,14 +27,14 @@ class Plant:
         self.name = name
         self._height = height
         self._age = age
-        self._statistics: Plant.Statistics = self.Statistics()
+        self._statistics = self.Statistics()
 
     def set_height(self, _height: float) -> None:
-        self._height = _height
         if _height < 0:
             print(f"{self.name}: Error, height can't be negative")
             print("Height update rejected")
         else:
+            self._height = _height
             print(f"Height updated: {self._height}cm")
 
     def get_height(self) -> float:
@@ -106,7 +106,7 @@ class Flower(Plant):
     def show(self) -> None:
         super().show()
         print(f" Color {self.color}")
-        if self.is_bloomed == False:
+        if not self.is_bloomed:
             print(f" {self.name} is not bloomed yet")
         else:
             print(f" {self.name} is blooming beautifully")
@@ -146,7 +146,7 @@ class Tree(Plant):
     ):
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
-        self._statistics: Tree.TreeStats = self.TreeStats()
+        self._statistics: Tree.TreeStats = Tree.TreeStats()
 
     def show(self) -> None:
         super().show()
@@ -156,7 +156,8 @@ class Tree(Plant):
         print(f"[asking the {self.name} to produce shade]")
         self._statistics.increase_shade()
         print(
-            f"Tree Oak now produces a shade of {self._height}cm long and {self.trunk_diameter}cm wide.")
+            f"Tree {self.name} now produces a shade of {self._height}cm "
+            "long and {self.trunk_diameter}cm wide.")
 
 
 class Vegetable(Plant):
