@@ -1,6 +1,6 @@
 class Plant:
     class Statistics:
-        def __init__(self):
+        def __init__(self) -> None:
             self._count_grow = 0
             self._count_age = 0
             self._count_show = 0
@@ -84,7 +84,7 @@ class Plant:
             print(f"Is {days} more than a year? -> False")
 
     @classmethod
-    def anonymous(cls):
+    def anonymous(cls) -> "Plant":
         return cls("Unknown plant", 0.0, 0)
 
     def show_stats(self) -> None:
@@ -126,7 +126,7 @@ class Flower(Plant):
 
 class Tree(Plant):
     class TreeStats(Plant.Statistics):
-        def __init__(self):
+        def __init__(self) -> None:
             super().__init__()
             self._count_shade = 0
 

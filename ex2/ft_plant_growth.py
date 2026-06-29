@@ -33,7 +33,7 @@ class Plant:
         return self.height - initial
 
 
-def ft_plant_growth():
+def ft_plant_growth() -> None:
     plant1 = Plant("Rose", 50, 10)
     print("=== Garden Plant Growth ===")
     diff = plant1.simulate_days(7)

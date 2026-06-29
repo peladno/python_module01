@@ -33,7 +33,7 @@ class Plant:
         return self.height - initial
 
 
-def ft_plant_factory():
+def ft_plant_factory() -> None:
     plant_list = [
         Plant("Rose", 25, 13),
         Plant("Sunflower", 10, 13),

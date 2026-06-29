@@ -55,7 +55,7 @@ class Plant:
         return self._height - initial
 
 
-def ft_garden_security():
+def ft_garden_security() -> None:
     print("=== Garden Security System ===")
     plant = Plant("Rose", 15.0, 10)
     print("Created: ", end="")
