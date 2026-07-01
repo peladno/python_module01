@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 class Plant:
     class Statistics:
         def __init__(self) -> None:
